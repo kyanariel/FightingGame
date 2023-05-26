@@ -199,21 +199,16 @@ const keys = {
 }
 
 decreaseTimer()
-let lastTime = 0;
 
 function animate(timestamp) {
-  // untied framerate cus luca said so
-  const deltaTime = timestamp - lastTime;
-  lastTime = timestamp;
-
   window.requestAnimationFrame(animate)
   c.fillStyle = 'black'
   c.fillRect(0, 0, canvas.width, canvas.height)
   background.update()
   c.fillStyle = 'rgba(255, 255, 255, 0.15)'
   c.fillRect(0, 0, canvas.width, canvas.height)
-  player.update(deltaTime);
-  enemy.update(deltaTime);
+  player.update();
+  enemy.update();
 
   player.velocity.x = 0
   enemy.velocity.x = 0
