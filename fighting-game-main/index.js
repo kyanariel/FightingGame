@@ -64,7 +64,7 @@ const player = new Fighter({
       framesMax: 7
     },
     attackTurn:{
-      imageSrc: './img/samuraiMack/AttackTurn.png',
+      imageSrc: './img/samuraiMack/attackTurn.png',
       framesMax: 7
     },
     takeHit: {
